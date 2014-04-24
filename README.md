@@ -21,7 +21,7 @@ vagrant up
 vagrant ssh
 ```
 
-## Test
+## Test: CLI
 
 From either the host or the guest you should now be able to run:
 
@@ -40,3 +40,9 @@ And get the response:
   "success":true
 }
 ```
+
+## Test: Browser
+
+Navigate to [http://localhost:10042/](http://localhost:10042/). You should see:
+
+![Screenshot](https://i.cloudup.com/PAh_mz8ad3.png)
