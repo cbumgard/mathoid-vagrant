@@ -45,4 +45,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "phantomjs"
   end
 
+  # Copy the user's .gitconfig (if it exists) so they don't
+  # have to reconfigure Git in the VM:
+  config.vm.provision "file", source: "~/.gitconfig", destination: "/home/vagrant/.gitconfig"
+
 end
