@@ -17,7 +17,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # within the machine from a port on the host machine. 
   # Accessing "localhost:10042" will access port 10042 on the guest machine.
   # 10042 is the default port that Mathoid runs on.
-  # config.vm.network "forwarded_port", guest: 10042, host: 10042
+  config.vm.network "forwarded_port", guest: 10042, host: 10042
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -42,7 +42,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # have to reconfigure Git in the VM:
   config.vm.provision "file", source: "~/.gitconfig", destination: "/home/vagrant/.gitconfig"
 
-  # Install Mathoid PPA and distribution:
+  # Install Mathoid PPA and distribution.
+  # Based on steps at http://www.formulasearchengine.com/mathoid
   config.vm.provision "shell", inline: "echo 'deb http://apt.wikimedia.org/wikimedia precise-wikimedia main universe' > /etc/apt/sources.list.d/wikimedia.list"
   config.vm.provision "shell", inline: "echo 'deb-src http://apt.wikimedia.org/wikimedia precise-wikimedia main universe' >> /etc/apt/sources.list.d/wikimedia.list"
   config.vm.provision "shell", inline: "apt-get -y update"
