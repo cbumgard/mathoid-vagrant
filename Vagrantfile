@@ -45,6 +45,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Install Mathoid PPA and distribution:
   config.vm.provision "shell", inline: "echo 'deb http://apt.wikimedia.org/wikimedia precise-wikimedia main universe' > /etc/apt/sources.list.d/wikimedia.list"
   config.vm.provision "shell", inline: "echo 'deb-src http://apt.wikimedia.org/wikimedia precise-wikimedia main universe' >> /etc/apt/sources.list.d/wikimedia.list"
+  config.vm.provision "shell", inline: "apt-get -y update"
   config.vm.provision "shell", inline: "add-apt-repository -y ppa:physikerwelt/mathoid"
   config.vm.provision "shell", inline: "apt-get -y update"
   config.vm.provision "shell", inline: "apt-get install -y --force-yes mathoid"
