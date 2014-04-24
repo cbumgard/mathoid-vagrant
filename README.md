@@ -46,3 +46,11 @@ And get the response:
 Navigate to [http://localhost:10042/](http://localhost:10042/). You should see:
 
 ![Screenshot](https://i.cloudup.com/PAh_mz8ad3.png)
+
+## Troubleshooting
+
+If for some reason Vagrant cannot find the precise64 base box manually install it via:
+
+```
+vagrant box add hashicorp/precise64
+```
