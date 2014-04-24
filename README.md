@@ -4,10 +4,14 @@ Vagrant machine to configure an Ubuntu Trusty 14.04 64-bit box with Mathoid base
 
 ## Install Vagrant & VirtualBox
 
-### Install Vagrant:
+### Install Vagrant 1.5+
+
 [http://vagrantup.com](http://vagrantup.com)
 
-### Install VirtualBox:
+__Note: you need 1.5 or newer for boxes to automatically download and install.__
+
+### Install VirtualBox
+
 [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads)
 
 ## Provision a VM
